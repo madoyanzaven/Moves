@@ -23,9 +23,10 @@ struct MovieResponse: Decodable {
     let imagePath: String?
     let voteCount: Int?
     let releaseDate: String?
+    let overview: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, title
+        case id, title, overview
         case imagePath = "poster_path"
         case voteCount = "vote_count"
         case releaseDate = "release_date"

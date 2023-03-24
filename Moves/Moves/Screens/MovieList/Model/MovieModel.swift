@@ -13,6 +13,7 @@ struct MovieModel {
     let imagePath: String?
     let voteCount: Int?
     let releaseDate: String?
+    let overview: String?
     
     var imageUrl: URL? {
         if let imagePath = imagePath {
@@ -28,7 +29,7 @@ struct MovieModel {
               let yearString = date.toStringWithYear()
         else { return ""}
         
-        return yearString
+        return "Date: \(yearString)"
     }
     
     var voteValue: String {

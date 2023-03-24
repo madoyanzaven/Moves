@@ -13,7 +13,12 @@ final class MovieListTableViewController: UITableViewController {
     // MARK: - Properties
     private let heightForRowAt: CGFloat = 200
     private let contentOffsetY: CGFloat = 50
-    private let movieRefreshControl = UIRefreshControl()
+    private lazy var movieRefreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        return refreshControl
+    }()
     
     // MARK: - Dependencies
     let viewModel: MovieListViewModel
@@ -33,8 +38,8 @@ final class MovieListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupView()
-        setupPageControl()
         registerTableView()
+        setupPageControl()
         bind()
         viewModel.loadMovieList()
     }
@@ -84,7 +89,7 @@ final class MovieListTableViewController: UITableViewController {
     
     private func setupPageControl() {
         movieRefreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        tableView.refreshControl = refreshControl
+        tableView.refreshControl = movieRefreshControl
     }
     
     private func registerTableView() {

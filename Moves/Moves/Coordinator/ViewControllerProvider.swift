@@ -24,8 +24,14 @@ extension ViewControllerProvider {
         }
         
         static var detail: MovieDetailViewController {
-            
-            return MovieDetailViewController()
+            let assemblies: [Assembly] = [
+                MovieDetailServiceAssembly(),
+                MovieDetailAssembly()
+            ]
+            let assembler = Assembler(assemblies)
+            let vc = assembler.resolver.resolve(MovieDetailViewController.self)!
+
+            return vc
         }
     }
 }

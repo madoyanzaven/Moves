@@ -74,20 +74,20 @@ final class MovieListViewModel: MovieListBusinessRules {
     }
     
     func pushToDetail(_ indexPath: IndexPath) {
-        guard let selectedCharacter =
+        guard let selectedMovie =
                 moviesModel[safe: indexPath.row] else { return }
-        coordinator.pushToDetail(with: selectedCharacter)
+        coordinator.pushToDetail(with: selectedMovie)
     }
     
-    private func updateCells(with characters: [MovieModel]) {
+    private func updateCells(with movies: [MovieModel]) {
         indexPaths.removeAll()
-        let oldCharacterCount = moviesModel.count
-        let newRows = oldCharacterCount + characters.count
+        let oldMovieCount = moviesModel.count
+        let newRows = oldMovieCount + movies.count
         
-        for row in oldCharacterCount..<newRows {
+        for row in oldMovieCount..<newRows {
             indexPaths.append(IndexPath(row: row, section: 0))
         }
-        self.movies.append(contentsOf: characters)
+        self.movies.append(contentsOf: movies)
         self.updatedIndexPathBehaviorRelay.accept(self.indexPaths)
     }
 }

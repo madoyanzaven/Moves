@@ -24,6 +24,7 @@ final class MainCoordinator: Coordinating {
     func pushToDetail(with model: MovieModel) {
         let detailVC = ViewControllerProvider.Main.detail
         
+        detailVC.viewModel.setup(with: model, self)
         navigationController.pushViewController(detailVC, animated: true)
     }
     

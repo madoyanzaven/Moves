@@ -10,18 +10,22 @@ import UIKit
 enum Constants {
     enum API {
         case list
+        case detail(Int)
         
         var path: String {
             switch self {
             case .list :
                 return "/3/discover/movie"
+            case let .detail(id):
+                return "/3/movie/\(id)"
             }
         }
-        
         var jsonFile: String {
             switch self {
             case .list:
                 return "MovieList"
+            case .detail:
+                return "MovieDetail"
             }
         }
     }

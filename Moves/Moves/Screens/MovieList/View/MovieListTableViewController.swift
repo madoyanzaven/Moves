@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxCocoa
 import RxSwift
 
 final class MovieListTableViewController: UITableViewController {
@@ -98,21 +97,18 @@ final class MovieListTableViewController: UITableViewController {
     }
     
     private func bind() {
-        viewModel.updatedIndexPathBehaviorRelay
-            .asDriver()
-            .drive(onNext: { [weak self] indexPaths in
-                guard let strongSelf = self,
-                      let updatedIndexPaths = indexPaths
-                else { return }
-                if updatedIndexPaths.isEmpty {
-                    strongSelf.tableView.reloadData()
-                } else {
-                    strongSelf.tableView.insertRows(
-                        at: updatedIndexPaths,
-                        with: .automatic
-                    )
-                }
-            }).disposed(by: viewModel.disposeBag)
+        viewModel.updatedIndexPathPublishRelay.observe(on: MainScheduler.instance).subscribe { [weak self] updatedIndexPaths in
+            guard let self = self else { return }
+            if updatedIndexPaths.isEmpty {
+                self.tableView.reloadData()
+            } else {
+                self.tableView.insertRows(
+                    at: updatedIndexPaths,
+                    with: .automatic
+                )
+            }
+        }.disposed(by: viewModel.disposeBag)
+        
     }
     
     private func fetchDataWhileScrollingDown(for scrollView: UIScrollView) {

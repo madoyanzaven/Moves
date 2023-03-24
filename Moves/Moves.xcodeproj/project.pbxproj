@@ -11,11 +11,9 @@
 		14F91D0E29CC753A0067C7F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91D0D29CC753A0067C7F1 /* SceneDelegate.swift */; };
 		14F91D1529CC753B0067C7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F91D1429CC753B0067C7F1 /* Assets.xcassets */; };
 		14F91D1829CC753B0067C7F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F91D1629CC753B0067C7F1 /* LaunchScreen.storyboard */; };
-		14F91D2329CC753B0067C7F1 /* MovesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91D2229CC753B0067C7F1 /* MovesTests.swift */; };
 		14F91D2D29CC753B0067C7F1 /* MovesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91D2C29CC753B0067C7F1 /* MovesUITests.swift */; };
 		14F91D2F29CC753B0067C7F1 /* MovesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91D2E29CC753B0067C7F1 /* MovesUITestsLaunchTests.swift */; };
 		14F91D3D29CC77CE0067C7F1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 14F91D3C29CC77CE0067C7F1 /* Swinject */; };
-		14F91D4029CC77FF0067C7F1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 14F91D3F29CC77FF0067C7F1 /* RxCocoa */; };
 		14F91D4229CC77FF0067C7F1 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 14F91D4129CC77FF0067C7F1 /* RxRelay */; };
 		14F91D4429CC77FF0067C7F1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 14F91D4329CC77FF0067C7F1 /* RxSwift */; };
 		14F91D4729CC78410067C7F1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91D4629CC78410067C7F1 /* Environment.swift */; };
@@ -76,6 +74,13 @@
 		14F91DDD29CD6AE30067C7F1 /* MovieDetailServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DDC29CD6AE30067C7F1 /* MovieDetailServiceAssembly.swift */; };
 		14F91DDF29CD6B1D0067C7F1 /* MovieDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DDE29CD6B1D0067C7F1 /* MovieDetailAssembly.swift */; };
 		14F91DE129CD72D90067C7F1 /* MovieDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 14F91DE029CD72D90067C7F1 /* MovieDetail.json */; };
+		14F91DE629CD7F1B0067C7F1 /* MovieListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DE529CD7F1B0067C7F1 /* MovieListViewModelTests.swift */; };
+		14F91DE829CD7F5A0067C7F1 /* MovieListBusinessRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DE729CD7F5A0067C7F1 /* MovieListBusinessRulesTests.swift */; };
+		14F91DEB29CD7FCE0067C7F1 /* MovieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DEA29CD7FCE0067C7F1 /* MovieModelFactory.swift */; };
+		14F91DED29CD80BD0067C7F1 /* MovieListResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DEC29CD80BD0067C7F1 /* MovieListResponseFactory.swift */; };
+		14F91DEF29CD820B0067C7F1 /* MovieResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DEE29CD820B0067C7F1 /* MovieResponseFactory.swift */; };
+		14F91DF229CD83790067C7F1 /* BaseMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DF129CD83790067C7F1 /* BaseMockService.swift */; };
+		14F91DF429CD839C0067C7F1 /* MockMovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F91DF329CD839C0067C7F1 /* MockMovieListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +108,6 @@
 		14F91D1729CC753B0067C7F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14F91D1929CC753B0067C7F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F91D1E29CC753B0067C7F1 /* MovesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14F91D2229CC753B0067C7F1 /* MovesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesTests.swift; sourceTree = "<group>"; };
 		14F91D2829CC753B0067C7F1 /* MovesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F91D2C29CC753B0067C7F1 /* MovesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesUITests.swift; sourceTree = "<group>"; };
 		14F91D2E29CC753B0067C7F1 /* MovesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -164,6 +168,13 @@
 		14F91DDC29CD6AE30067C7F1 /* MovieDetailServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailServiceAssembly.swift; sourceTree = "<group>"; };
 		14F91DDE29CD6B1D0067C7F1 /* MovieDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailAssembly.swift; sourceTree = "<group>"; };
 		14F91DE029CD72D90067C7F1 /* MovieDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieDetail.json; sourceTree = "<group>"; };
+		14F91DE529CD7F1B0067C7F1 /* MovieListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelTests.swift; sourceTree = "<group>"; };
+		14F91DE729CD7F5A0067C7F1 /* MovieListBusinessRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListBusinessRulesTests.swift; sourceTree = "<group>"; };
+		14F91DEA29CD7FCE0067C7F1 /* MovieModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModelFactory.swift; sourceTree = "<group>"; };
+		14F91DEC29CD80BD0067C7F1 /* MovieListResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponseFactory.swift; sourceTree = "<group>"; };
+		14F91DEE29CD820B0067C7F1 /* MovieResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseFactory.swift; sourceTree = "<group>"; };
+		14F91DF129CD83790067C7F1 /* BaseMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMockService.swift; sourceTree = "<group>"; };
+		14F91DF329CD839C0067C7F1 /* MockMovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F91D4229CC77FF0067C7F1 /* RxRelay in Frameworks */,
-				14F91D4029CC77FF0067C7F1 /* RxCocoa in Frameworks */,
 				14F91DB329CCA2CF0067C7F1 /* AlamofireImage in Frameworks */,
 				14F91D4429CC77FF0067C7F1 /* RxSwift in Frameworks */,
 				14F91D3D29CC77CE0067C7F1 /* Swinject in Frameworks */,
@@ -234,7 +244,9 @@
 		14F91D2129CC753B0067C7F1 /* MovesTests */ = {
 			isa = PBXGroup;
 			children = (
-				14F91D2229CC753B0067C7F1 /* MovesTests.swift */,
+				14F91DE429CD7EE60067C7F1 /* MovieListTests */,
+				14F91DF029CD836C0067C7F1 /* MockService */,
+				14F91DE929CD7FA10067C7F1 /* MockFactory */,
 			);
 			path = MovesTests;
 			sourceTree = "<group>";
@@ -518,6 +530,34 @@
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
+		14F91DE429CD7EE60067C7F1 /* MovieListTests */ = {
+			isa = PBXGroup;
+			children = (
+				14F91DE529CD7F1B0067C7F1 /* MovieListViewModelTests.swift */,
+				14F91DE729CD7F5A0067C7F1 /* MovieListBusinessRulesTests.swift */,
+			);
+			path = MovieListTests;
+			sourceTree = "<group>";
+		};
+		14F91DE929CD7FA10067C7F1 /* MockFactory */ = {
+			isa = PBXGroup;
+			children = (
+				14F91DEA29CD7FCE0067C7F1 /* MovieModelFactory.swift */,
+				14F91DEE29CD820B0067C7F1 /* MovieResponseFactory.swift */,
+				14F91DEC29CD80BD0067C7F1 /* MovieListResponseFactory.swift */,
+			);
+			path = MockFactory;
+			sourceTree = "<group>";
+		};
+		14F91DF029CD836C0067C7F1 /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				14F91DF129CD83790067C7F1 /* BaseMockService.swift */,
+				14F91DF329CD839C0067C7F1 /* MockMovieListService.swift */,
+			);
+			path = MockService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -536,7 +576,6 @@
 			name = Moves;
 			packageProductDependencies = (
 				14F91D3C29CC77CE0067C7F1 /* Swinject */,
-				14F91D3F29CC77FF0067C7F1 /* RxCocoa */,
 				14F91D4129CC77FF0067C7F1 /* RxRelay */,
 				14F91D4329CC77FF0067C7F1 /* RxSwift */,
 				14F91DB229CCA2CF0067C7F1 /* AlamofireImage */,
@@ -596,6 +635,7 @@
 					};
 					14F91D1D29CC753B0067C7F1 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 14F91D0729CC753A0067C7F1;
 					};
 					14F91D2729CC753B0067C7F1 = {
@@ -726,7 +766,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F91D2329CC753B0067C7F1 /* MovesTests.swift in Sources */,
+				14F91DEF29CD820B0067C7F1 /* MovieResponseFactory.swift in Sources */,
+				14F91DED29CD80BD0067C7F1 /* MovieListResponseFactory.swift in Sources */,
+				14F91DEB29CD7FCE0067C7F1 /* MovieModelFactory.swift in Sources */,
+				14F91DE829CD7F5A0067C7F1 /* MovieListBusinessRulesTests.swift in Sources */,
+				14F91DF229CD83790067C7F1 /* BaseMockService.swift in Sources */,
+				14F91DF429CD839C0067C7F1 /* MockMovieListService.swift in Sources */,
+				14F91DE629CD7F1B0067C7F1 /* MovieListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,15 +986,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LD82R5CD8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karapp.MovesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moves.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Moves";
@@ -960,11 +1013,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LD82R5CD8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karapp.MovesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1103,15 +1162,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LD82R5CD8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karapp.MovesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moves.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Moves";
@@ -1223,11 +1289,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LD82R5CD8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karapp.MovesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1337,11 +1409,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14F91D3B29CC77CE0067C7F1 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		14F91D3F29CC77FF0067C7F1 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 14F91D3E29CC77FF0067C7F1 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
 		};
 		14F91D4129CC77FF0067C7F1 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;

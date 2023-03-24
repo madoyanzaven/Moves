@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class MovieDetailViewController: UIViewController {
     let detailView: DetailView = DetailView.loadFromNib()
@@ -47,7 +48,7 @@ final class MovieDetailViewController: UIViewController {
     }
     
     private func bind() {
-        viewModel.displayPublishRelay.bind { [weak self] model in
+        viewModel.displayPublishRelay.observe(on: MainScheduler.instance).subscribe { [weak self] model in
             self?.detailView.setup(with: model)
         }.disposed(by: viewModel.disposeBag)
     }

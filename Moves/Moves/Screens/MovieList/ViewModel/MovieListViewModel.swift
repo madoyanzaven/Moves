@@ -11,7 +11,7 @@ import RxRelay
 
 final class MovieListViewModel: MovieListBusinessRules {
     private weak var coordinator : MainCoordinator!
-    let updatedIndexPathBehaviorRelay: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
+    let updatedIndexPathPublishRelay = PublishRelay<[IndexPath]>()
     let disposeBag = DisposeBag()
     var isLoading = false
     
@@ -55,7 +55,7 @@ final class MovieListViewModel: MovieListBusinessRules {
                 strongSelf.currentPage += 1
                 guard !strongSelf.moviesModel.isEmpty else {
                     strongSelf.movies.append(contentsOf: models)
-                    strongSelf.updatedIndexPathBehaviorRelay.accept(strongSelf.indexPaths)
+                    strongSelf.updatedIndexPathPublishRelay.accept(strongSelf.indexPaths)
                     return
                 }
                 self?.updateCells(with: models)
@@ -88,7 +88,7 @@ final class MovieListViewModel: MovieListBusinessRules {
             indexPaths.append(IndexPath(row: row, section: 0))
         }
         self.movies.append(contentsOf: movies)
-        self.updatedIndexPathBehaviorRelay.accept(self.indexPaths)
+        self.updatedIndexPathPublishRelay.accept(self.indexPaths)
     }
 }
 
